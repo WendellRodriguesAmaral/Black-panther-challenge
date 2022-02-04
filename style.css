@@ -1,0 +1,648 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{text-decoration: none;}
+
+/*######### Finish reset ######*/
+
+:root{
+    --font-title: 'Caesar Dressing', cursive;
+    --font-text: 'Coming Soon', cursive;
+    scroll-behavior: smooth;
+}
+
+/* ####### Finish Fonts  ########*/
+
+.all {
+  width: 100%;
+  min-height: auto;
+
+}
+
+.home {
+  width: 100%;
+  /* height: 100vh; */
+  position: relative;
+}
+
+header.head {
+  width: 100%;
+  height: 7rem;
+  background: linear-gradient(
+    90deg,
+    rgba(24, 23, 23, 1) 29%,
+    rgba(67, 67, 67, 1) 88%
+  );
+  display: flex;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+}
+
+.head .logo {
+  width: 70%;
+  height: 100%;
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+}
+
+.head .logo img {
+  object-fit: contain;
+}
+
+button.menuIcon {
+  width: 30%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.menuIcon img {
+  transform: scale(0.7);
+}
+
+/*#### apartir daqui menu drop donw ####*/
+
+.head .menuOptions {
+    display: none;
+}
+@keyframes showMenu {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+  
+}
+.head .menuOptions.show {
+    display:block ;
+    position: fixed;
+    width: 100%;
+    top:7rem;
+    bottom: 0;
+    background: linear-gradient(
+    90deg,
+    rgba(24, 23, 23, 1) 29%,
+    rgba(67, 67, 67, 1) 88%
+  );
+    /* background-color: wheat; */
+    z-index: 1;  
+    animation: showMenu .3s ; 
+}
+.navigation{
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    /* background-color: #232222; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+ul.listMenu{
+    width: 90%;
+    height: 90%;
+    /* background-color: yellowgreen; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+ul.listMenu li {
+    width: 100%;
+    height: 10%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+}
+ul.listMenu li a{
+    display: inline-flex;
+    /* background-color: red; */
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: var(--font-title);
+    color:rgba(197, 197, 197, 0.849)
+}
+ul.listMenu li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/*##### Finish menu #####*/
+
+.mainBanner {
+  width: 100%;
+  height: calc(100vh - 7rem); /* tudo menos a altura do menu */
+  margin-top: 7rem;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(24, 23, 23, 1) 70%
+    ),
+    url(./imagem\ pantera-negra.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem 2rem 3rem;
+  box-shadow: inset 0px 1px 4px 3px #232222;
+}
+
+.mainBanner .texts {
+  color: wheat;
+}
+
+.mainBanner .texts h1 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    opacity: .9;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+}
+.mainBanner .texts p {
+    font-family: var(--font-text);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.mainBanner .texts p span{
+  display: none;
+}
+
+/* ###### Finish home ##### */
+
+.skills{
+  width: 100%;
+  min-height: calc(100vh - 7rem);
+  background-color: rgba(24, 23, 23, 1);
+  box-shadow: inset 0px 1px 4px 3px #232222;
+}
+.skillsTitle{
+width: 100%;
+height: auto;
+display: flex;
+justify-content: start;
+padding-top:1rem;
+padding-left: 2rem;
+}
+.skillsTitle h1{
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  color: white;
+  opacity: .8;
+}
+
+.skillsVideo{
+  width: 100%;
+  height: 15rem;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.skillsVideo iframe{
+  width: 90%;
+  height: 95%;
+}
+
+.skillsText{
+  width: 100%;
+  height: auto;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.skill{
+  width: 80%;
+  height: 30%;
+  margin: 1rem 0;
+  /* background-color: green; */
+  border-radius: 10px;
+  border: solid 1px rgba(255, 255, 255, 0.699);
+  
+}
+
+.skill .viewSkill{
+  /* background-color: blue; */
+  display: flex;
+  height:3rem ;
+}
+
+.viewSkill h2{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-title);
+  color: white;
+  opacity: .8;
+  padding: 0 1rem;
+}
+.viewSkill img{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  transform: scale(.5) rotate(90deg);
+}
+
+.skill p{
+  color: white;
+  opacity: .8;
+  padding: 1rem;
+  font-family: var(--font-text);
+}
+
+p.toggle{
+  display:none;
+}
+p.toggle.visible{
+  display: block;
+}
+
+/* ## FINISH SKILLS ## */
+
+.about{
+  width: 100%;
+  min-height: calc(100vh - 7rem);
+  box-shadow: inset 0px 1px 500px 50px rgba(24, 23, 23, 1);
+  background: linear-gradient(
+    to top,
+    transparent 1%,
+    rgba(24, 23, 23, 0.822) 20%
+  ), url(./background\ about.png) center;
+  background-size: cover;
+  background-size: 150%;
+}
+
+.aboutTitle{
+  width: 100%;
+  height: 15%;
+}
+
+.aboutTitle h1{
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  color:white;
+  opacity: .8;
+  padding-top:1rem;
+  padding-left: 2rem;
+}
+
+.aboutText{
+  width: 100%;
+  height: 80%;
+  /* background-color: red; */
+  padding: 2rem 2rem 1rem;
+}
+
+.aboutText p{
+  font-family: var(--font-text);
+  color: white;
+  opacity: .7;
+  text-align: left;
+  font-size: 1.2rem;
+}
+.aboutText span{
+  display: none;
+}
+
+/* ### FINISH ABOUT ### */
+
+.photos{
+  width: 100%;
+  min-height: calc(100vh - 7rem);
+  background-color: rgba(24, 23, 23, 1);
+  box-shadow: inset 0px 1px 4px 3px #232222;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+.photosTitle{
+  width: 100%;
+  height: 15%;
+}
+
+.photosTitle h1{
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  color:white;
+  opacity: .8;
+  padding-top:1rem;
+  padding-left: 2rem;
+}
+
+.photosImg{
+  width: 80%;
+  height: 68vh;
+  /* background-color: red; */
+  margin-top: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll; 
+}
+
+.photosImg img{
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  border: solid 2px rgb(110, 103, 103);
+  filter: grayscale(.3);
+}
+
+/* ####### FINISH PHOTOS  ####### */
+
+.footer{
+  width: 100%;
+  height:30vh;
+  background-color: rgba(24, 23, 23, 1);
+  box-shadow: inset 0px 1px 4px 3px #232222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .links{
+  /* background-color: red; */
+  width: 50%;
+  height: 70%;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.footer .links a,
+.footer .links sub{
+  text-decoration: none;
+  color: white;
+  opacity: .8;
+  font-family: var(--font-text);
+}
+
+/* ####### FINISH FOOTER  ####### */
+
+/* ############################   FINISH MOBILE VERSION ############################# */
+
+
+/* ###  INIT IPAD VERSION  ###*/
+
+@media screen and (min-width: 760px) {
+  .skillsVideo {
+      height: 25rem;
+  }
+  .skill .viewSkill {
+      height: 5rem;
+  }
+  .aboutText {
+    padding: 5rem 5rem 1rem;
+  }
+
+  .aboutText p {
+    font-size: 2rem;
+  }
+  .photosImg {
+    width: 90%; 
+    flex-direction: row;
+  }
+
+  .photosImg img {
+      margin-right: 2rem;
+      border-radius: 20px;
+  }
+
+  .footer .links a,
+.footer .links sub{
+  font-size: 1.5rem;
+}
+
+}
+
+/* #### FINISH IPAD VERSION #####*/
+
+
+/* #######   INIT DESKTOP VERSION  ##########  */
+@media screen and (min-width:960px){
+  header.head {
+    width: 100%;
+    height: 5rem;
+  }
+  
+  .head .logo {
+    width: 30%;
+     padding: 0.5rem 0;
+  }
+  
+  .head .logo img {
+    padding-top: .3rem;
+  }
+  
+  button.menuIcon {
+    display: none;
+  }
+
+  .head .menuOptions {
+    display: block;
+    width: 100%;
+}
+
+.navigation{
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul.listMenu{
+  flex-direction: row;
+  width: 70%;
+}
+
+ul.listMenu li {
+  height: 80%;
+}
+
+ul.listMenu li a{
+  width: auto;
+  font-size: 1.5rem;
+}
+
+
+.mainBanner {
+  height: calc(100vh - 5rem); /* tudo menos a altura do menu */
+  margin-top: 5rem;
+  background-image: linear-gradient(
+      to left,
+      transparent 0%,
+      rgba(24, 23, 23, 1) 80%
+    ),
+    url(./imagem\ pantera-negra.jpg) ;
+    background-size: 70%;
+    background-position:right;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-color: rgba(24, 23, 23, 1);
+    align-items: flex-end;
+    padding-bottom:10rem;
+}
+
+.mainBanner .texts {
+  width: 40%;
+}
+.mainBanner .texts p {
+  font-size: .9rem;
+  letter-spacing: 0px;
+}
+
+.mainBanner .texts p span{
+  display: block;
+}
+
+.skillsVideo{
+  width: 80%;
+  height:20rem;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:  auto;
+}
+.skillsVideo iframe{
+  width: 50%;
+  height: 95%;
+  display: block;
+}
+
+.skills{
+  min-height: 100vh;
+}
+
+.skillsText{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 0 3rem;
+
+}
+
+.skill{
+  width: 30%;
+  height: 30%;
+}
+
+.skill .viewSkill{
+  display: flex;
+  height:3rem ;
+}
+
+.about{
+  background: linear-gradient(
+    to top,
+    transparent 1%,
+    rgba(24, 23, 23, 0.973) 1%
+  ), url(./background\ about.png) center  no-repeat;
+  background-size: 100%;
+}
+
+.aboutText{
+  /* background-color: red; */
+  padding: 2rem 10rem 1rem;
+  margin-top: 2rem;
+}
+
+.aboutText p{
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 2;
+}
+.aboutText span{
+  display: block;
+}
+
+.photos{
+  min-height: calc(100vh - 5rem);
+}
+
+.photosImg{
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  overflow: visible;
+  /* background-color: red; */
+
+}
+
+.photosImg img{
+width: 90%;
+margin: 0;
+gap: 1rem;
+align-self: center;
+justify-self: center;
+opacity: .5;
+transition:  all .5s;
+}
+
+.photosImg img:hover{
+  opacity: 1;
+  transform: scale(1.5);
+  z-index: 2;
+}
+
+.footer{
+ height: auto;
+ padding: 1rem;
+  /* background-color: aqua; */
+}
+
+.footer .links{
+
+  width: 50%;
+  height: auto;
+  padding: .5rem 0;
+  flex-direction: row;
+  /* background-color: red; */
+}
+
+.footer .links a,
+.footer .links sub{
+  font-size: 1rem;
+}
+
+.footer .links a:hover,
+.footer .links sub:hover{
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
